@@ -19,15 +19,6 @@ class _LandingPageScreenState extends State<LandingPageScreen> {
    
   }
 
-  Widget _buildFullscrenImage() {
-    return Image.asset(
-      'assets/images/imageSlide1.png',
-      fit: BoxFit.cover,
-      height: double.infinity,
-      width: double.infinity,
-      alignment: Alignment.center,
-    );
-  }
 
   Widget _buildImage(String assetName, [double width = 400]) {
     return Image.asset('assets/images/$assetName', width: width, fit: BoxFit.fitHeight, );
@@ -49,15 +40,15 @@ class _LandingPageScreenState extends State<LandingPageScreen> {
     return IntroductionScreen(
       key: introKey,
       globalBackgroundColor: Colors.white,
-      globalHeader: Align(
-        alignment: Alignment.topRight,
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 16, right: 16),
-            child: Image.asset('assets/images/logo.png', width: 100),
-          ),
-        ),
-      ),
+      // globalHeader: Align(
+      //   alignment: Alignment.topRight,
+      //   child: SafeArea(
+      //     child: Padding(
+      //       padding: const EdgeInsets.only(top: 16, right: 16),
+      //       child: Image.asset('assets/images/logo.png', width: 100),
+      //     ),
+      //   ),
+      // ),
       globalFooter: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -125,7 +116,7 @@ class _LandingPageScreenState extends State<LandingPageScreen> {
             textAlign: TextAlign.center,
             style: GoogleFonts.manrope(fontSize: 12),
           ),
-          image: _buildImage('imageSlide1.png'),
+          image: _buildImage('a.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
@@ -155,7 +146,7 @@ class _LandingPageScreenState extends State<LandingPageScreen> {
             textAlign: TextAlign.center,
             style: GoogleFonts.manrope(fontSize: 12),
           ),
-          image: _buildImage('imageSlide2.png'),
+          image: _buildImage('b.png'),
           decoration: pageDecoration,
         ),
         PageViewModel(
@@ -182,7 +173,7 @@ class _LandingPageScreenState extends State<LandingPageScreen> {
             textAlign: TextAlign.center,
             style: GoogleFonts.manrope(fontSize: 12),
           ),
-          image: _buildImage('imageSlide3.png'),
+          image: _buildImage('c.png'),
           decoration: pageDecoration,
         ),
       ],

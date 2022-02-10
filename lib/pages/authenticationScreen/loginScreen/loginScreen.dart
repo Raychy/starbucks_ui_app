@@ -20,7 +20,7 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              welcomeMessageWidget("Good Morning  👋", "Welcome back!",""),
+              welcomeMessageWidget("Good Morning  👋", "Welcome back!", ""),
               // Starbucks Promotion
 
               _displayName(),
@@ -79,15 +79,17 @@ class LoginScreen extends StatelessWidget {
                   BorderSide(color: Colors.grey, width: 2),
                   Colors.black,
                   () {}),
-              dontHaveAccountWidget(context, 'Don\'t have an account?',"Sign Up", () => Navigator.pushNamed(context, "/register-page")),
+              dontHaveAccountWidget(
+                  context,
+                  'Don\'t have an account?',
+                  "Sign Up",
+                  () => Navigator.pushNamed(context, "/register-page")),
             ],
           ),
         ),
       ),
     );
   }
-
-
 
   Widget _displayName() {
     return Padding(
@@ -111,5 +113,4 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
-
 }
